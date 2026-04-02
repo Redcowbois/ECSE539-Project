@@ -1,0 +1,25 @@
+role VillagerForager {
+  slots { home }
+
+  rule returnHome {
+    when idle and not at(home)
+    do move_to(home);
+  }
+
+  rule forage {
+    when idle and at(home) and exists(shroom)
+    choose {
+      chance 60 -> eat_nearest_shroom;
+      wander(home);
+      wait;
+    }
+  }
+
+  rule idleRule {
+    when idle and at(home)
+    choose {
+      wander(home);
+      wait;
+    }
+  }
+}

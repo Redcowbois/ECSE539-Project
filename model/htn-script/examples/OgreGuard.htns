@@ -1,0 +1,41 @@
+role OgreGuard {
+  slots { player, villager, post }
+
+  rule attackPlayer {
+    when sees(player)
+    choose {
+      chance 60 -> chase(player);
+      sequence {
+        pick_rock;
+        throw_at(player);
+      }
+    }
+  }
+
+  rule attackVillager {
+    when sees(villager) and not sees(player)
+    choose {
+      chance 60 -> chase(villager);
+      sequence {
+        pick_rock;
+        throw_at(villager);
+      }
+    }
+  }
+
+  rule returnToPost {
+    when idle and not at(post) and not sees(player) and not sees(villager)
+    interrupt_when sees(player) or sees(villager)
+    do move_to(post);
+  }
+
+  rule guardIdle {
+    when idle and at(post) and not sees(player) and not sees(villager)
+    interrupt_when sees(player) or sees(villager)
+    choose {
+      chance 30 -> jump;
+      chance 50 -> spin;
+      wait;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+    "projectName": "HtnScript",
+    "languages": [
+        {
+            "id": "htn-script",
+            "grammar": "src/htn-script.langium",
+            "fileExtensions": [
+                "htns"
+            ],
+            "textMate": {
+                "out": "syntaxes/htn-script.tmLanguage.json"
+            }
+        }
+    ],
+    "out": "src/generated"
+}
