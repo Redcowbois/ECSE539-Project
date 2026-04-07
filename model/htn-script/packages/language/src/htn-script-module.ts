@@ -3,19 +3,13 @@ import { createDefaultModule, createDefaultSharedModule, type DefaultSharedModul
 import { HtnScriptGeneratedModule, HtnScriptGeneratedSharedModule } from './generated/module.js';
 import { HtnScriptValidator, registerValidationChecks } from './htn-script-validator.js';
 
-/**
- * Declaration of custom services - add your own service classes here.
- */
+
 export type HtnScriptAddedServices = {
     validation: {
         HtnScriptValidator: HtnScriptValidator
     }
 }
 
-/**
- * Union of Langium default services and your custom services - use this as constructor parameter
- * of custom service classes.
- */
 export type HtnScriptServices = LangiumServices & HtnScriptAddedServices
 
 /**
