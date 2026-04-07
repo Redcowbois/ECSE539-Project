@@ -50,7 +50,7 @@ export function extractDestinationAndName(name: string, destination: string | un
     return {
         destination: destination
             ? path.resolve(destination)
-            : path.join(projectRoot, 'Comp521A4SubmissionJy261120183', 'Assets', 'Scripts', 'AIDsl', 'Generated'),
+            : path.join(projectRoot, 'DemoFiles', 'Assets', 'Scripts', 'AIDsl', 'Generated'),
         name
     };
 }

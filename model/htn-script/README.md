@@ -29,4 +29,4 @@ This workspace now targets the Unity AI DSL flow:
 
 By default, generated C# files are written to:
 
-- `../Comp521A4SubmissionJy261120183/Assets/Scripts/AIDsl/Generated/`
+- `../DemoFiles/Assets/Scripts/AIDsl/Generated/`

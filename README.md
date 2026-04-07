@@ -82,7 +82,7 @@ node packages/cli/bin/cli.js generate examples/VillagerForager.htns
 
 Generated C# files are written to:
 
-- `Comp521A4SubmissionJy261120183/Assets/Scripts/AIDsl/Generated/`
+- `DemoFiles/Assets/Scripts/AIDsl/Generated/`
 
 ## When to rebuild the Langium workspace
 
