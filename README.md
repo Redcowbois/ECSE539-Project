@@ -2,6 +2,8 @@
 
 This project uses a small DSL to describe AI behavior and generate Unity C# agent scripts.
 
+View Files_Overview.md for more details on directory structure.
+
 ## Where to edit
 
 Edit `.htns` files in:
